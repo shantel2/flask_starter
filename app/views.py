@@ -56,7 +56,7 @@ def property():
 
 @app.route('/properties/')
 def properties():
-    properties = db.session.query(Property).all()
+    properties = Property.query.all()
     return render_template('properties.html', properties=properties)
 
 #gets image file
