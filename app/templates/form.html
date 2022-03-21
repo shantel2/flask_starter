@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+
+{% block main %}
+{%include 'flash_messages.html' %}
+<div class = 'p-3 mb-4 bg-light rounded-3 border'>
+    <h1 class = ' heading'>Add New Property</h1>
+<section class="box ">
+    <form action="{{ url_for('property') }}" method="POST" id='new-property-form' enctype="multipart/form-data" >
+        {{ form.csrf_token }}
+        <div>
+            {{ form.title.label }}
+            {{ form.title(class ='form-control')}}
+
+
+            {{form.description.label}}
+            {{form.description(class ='form-control')}}
+        </div>
+
+        <div class = 'row'>
+            <div>
+            {{form.totalRooms.label}}
+            </div>
+
+            <div>
+            {{form.totalBathrooms.label}}
+            
+            </div>
+
+            <div>
+            {{form.totalRooms(class ='form-control', placeholder="3")}}
+            </div>
+
+            <div>
+                {{form.totalBathrooms(class ='form-control',placeholder="2")}}
+            </div>
+            
+            <div>{{form.price.label}} </div>
+            <div>{{form.propertyType.label}}</div>
+
+            <div>
+                {{form.price(class ='form-control', placeholder="15,000,000")}}
+            </div>
+    
+            <div>
+                {{form.propertyType(class ='form-control')}}
+            </div>    
+
+
+        </div>
+
+       
+        <div>
+            {{form.location.label}}
+            {{form.location(class ='form-control', placeholder="10 Waterloo rd")}}
+        </div>
+
+        <div class ='upload'>
+            {{form.photo.label}}
+            {{ form.photo}}
+
+        </div>
+
+        <div class="">
+            <button type="submit" id="submit-button" class="sub" class="form-control">Add Property</button>
+        </div>
+
+    </form>
+</section>
+
+</div>
+
+{% endblock %}

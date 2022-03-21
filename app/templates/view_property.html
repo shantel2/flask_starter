@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block main %}
+
+<div class="property p-0 mb-4 bg-light rounded-3 border">
+    <div class="photo">
+        <img src="{{ url_for('get_Image', filename=_property.photo_name) }}" class="image" alt="{{ _property.photo_name }}">
+    </div>
+
+    <div class="'right-side">
+        <section class ='p-3'>
+            <h1>{{_property.title}} <span>- {{_property.rooms}} Bedroom </span></h1>
+        </section>
+
+        <div class="price-type pb-3">
+            <span class="badge badge-pill bg-warning px-3 py-2 text-light md-bold"
+            data-toggle="tooltip" data-placement="top" title="Price">${{ _property.price }}</span>
+            <span class="badge badge-pill bg-info px-3 py-2 text-light  md-bold"
+            data-toggle="tooltip" data-placement="top" title="Property Type">{{ _property.property_type}}</span>
+        </div>
+
+
+        <section class="description pb-3 md-bold pl-1">
+            {{_property.description}}
+        </section>
+
+
+        <div class="rooms">
+            <p class=""> <span class="room"> {{_property.rooms }} Bedrooms</span> <span class="bath">{{_property.bathrooms}} Bathrooms</span></p>
+        </div>
+
+        <div>
+            <img src='../static/icon/location.jpg' alt='location icon' class='location' />{{ _property.location }}</p>
+        </div>
+    
+        <div>
+            <a href="#" class="email-realtor btn btn-info font-weight-bold">Email Realtor</a>
+        </div>
+    </div>
+
+</div>
+{% endblock %}

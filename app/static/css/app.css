@@ -1,3 +1,89 @@
 body {
     padding-top: 5rem;
+   /* background-color: rgb(243, 250, 253);*/
 }
+
+.row{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.house{
+    margin: 2rem;
+}
+
+label{
+    margin-top: 10px;
+}
+.row-card {
+    display:inline-block;
+}
+
+.price-tag{
+    border-radius: 5px;
+    background: #7FDBFF;
+    width: 5rem;
+}
+
+.email-realtor{
+    width: 30%;
+    color: white;
+    margin-bottom: .5rem;
+}
+
+.bath{
+    padding: 10px;
+}
+
+.image{
+    width: 40rem;
+    height: 25rem;
+}
+
+img{
+    width: 320px;
+    height: 155px;
+}
+
+.dol-sign{
+    margin-left: 2rem;
+}
+
+.prop-btn{
+    width: 100%;
+    border-radius: 0;
+    background: #3D9970;
+}
+.card-footer{
+    margin: 0;
+    padding: 0;
+}
+
+.location{
+    height: 40px;
+    width: 40px;
+}
+.property{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 2em;
+}
+
+.sub{
+    margin-top: 15px;
+    border-radius: 6px;
+    border-width: 25%;
+    height: 35px;
+    border-color: rgb(16, 93, 207);
+    background-color: rgb(16, 93, 207);
+    color: white;
+}
+
+/* 
+input:valid, textarea:valid, select:valid{
+    border-color: rgb(99, 150, 95);
+}
+
+input:invalid, textarea:invalid, select:invalid{
+    border-color: red;
+} */
