@@ -1,4 +1,4 @@
-from msilib.schema import Property
+
 from . import db
 import enum
 from datetime import date
