@@ -9,11 +9,13 @@
             <div class="col">
                 <div class="card h-100">
                     <img src="{{ url_for('get_Image', filename=_property.photo_name) }}" class="card-img-top" alt="{{ _property.photo_name }}">
+
                     <div class="card-body">
                         <h5 class="card-title px-1 ml-1">{{ _property.title }}<span class="house">{{_property.property_type}}</span></h5> 
                             <img src='../static/icon/location.jpg' alt='location icon' class='location' />{{ _property.location }}</p>
-                        <div class="price-tag"><span class="'dol-sign">$</span>{{ _property.price }}</div>
+                        <div class=" badge badge-pill bg-warning px-4 py-2 text-light md-bold ml-1"><span class="'dol-sign">$</span>{{ _property.price }}</div>
                     </div>
+
                     <div class="card-footer prop">
                         <a href="{{ url_for('propertyid', pid=_property.id) }}" class="btn btn-info font-weight-bold prop-btn">View Property</a>
                     </div>

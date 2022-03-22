@@ -64,6 +64,12 @@ img{
     width: 40px;
 }
 
+.properties{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
 .property{
     display: grid;
     grid-template-columns: 1fr 1fr;
