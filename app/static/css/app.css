@@ -86,6 +86,12 @@ img{
     color: white;
 }
 
+.icon{
+    width: 1.75rem;
+    height: 1.5rem;
+    padding-bottom: .125rem;
+}
+
 /* 
 input:valid, textarea:valid, select:valid{
     border-color: rgb(99, 150, 95);
